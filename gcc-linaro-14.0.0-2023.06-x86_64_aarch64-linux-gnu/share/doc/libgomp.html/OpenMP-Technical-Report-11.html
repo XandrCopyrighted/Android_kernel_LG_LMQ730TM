@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 6.8, https://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- Copyright (C) 2006-2023 Free Software Foundation, Inc.
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3 or
+any later version published by the Free Software Foundation; with the
+Invariant Sections being "Funding Free Software", the Front-Cover
+texts being (a) (see below), and with the Back-Cover Texts being (b)
+(see below).  A copy of the license is included in the section entitled
+"GNU Free Documentation License".
+
+(a) The FSF's Front-Cover Text is:
+
+A GNU Manual
+
+(b) The FSF's Back-Cover Text is:
+
+You have freedom to copy and modify this GNU Manual, like GNU
+     software.  Copies published by the Free Software Foundation raise
+     funds for GNU development. -->
+<title>OpenMP Technical Report 11 (GNU libgomp)</title>
+
+<meta name="description" content="OpenMP Technical Report 11 (GNU libgomp)">
+<meta name="keywords" content="OpenMP Technical Report 11 (GNU libgomp)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link href="index.html" rel="start" title="Top">
+<link href="Library-Index.html" rel="index" title="Library Index">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="OpenMP-Implementation-Status.html" rel="up" title="OpenMP Implementation Status">
+<link href="OpenMP-5_002e2.html" rel="prev" title="OpenMP 5.2">
+<style type="text/css">
+<!--
+a.copiable-anchor {visibility: hidden; text-decoration: none; line-height: 0em}
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+span:hover a.copiable-anchor {visibility: visible}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en">
+<div class="section" id="OpenMP-Technical-Report-11">
+<div class="header">
+<p>
+Previous: <a href="OpenMP-5_002e2.html" accesskey="p" rel="prev">OpenMP 5.2</a>, Up: <a href="OpenMP-Implementation-Status.html" accesskey="u" rel="up">OpenMP Implementation Status</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Library-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<span id="OpenMP-Technical-Report-11-1"></span><h3 class="section">2.5 OpenMP Technical Report 11</h3>
+
+<p>Technical Report (TR) 11 is the first preview for OpenMP 6.0.
+</p>
+<ul class="section-toc">
+<li><a href="#New-features-listed-in-Appendix-B-of-the-OpenMP-specification-3" accesskey="1">New features listed in Appendix B of the OpenMP specification</a></li>
+<li><a href="#Other-new-TR-11-features" accesskey="2">Other new TR 11 features</a></li>
+</ul>
+<div class="unnumberedsubsec" id="New-features-listed-in-Appendix-B-of-the-OpenMP-specification-3">
+<h4 class="unnumberedsubsec">New features listed in Appendix B of the OpenMP specification</h4>
+<table>
+<tr><td width="60%">Features deprecated in versions 5.2, 5.1 and 5.0 were removed</td><td width="10%">N/A</td><td width="25%">Backward compatibility</td></tr>
+<tr><td width="60%">The <code>decl</code> attribute was added to the C++ attribute syntax</td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%"><code>_ALL</code> suffix to the device-scope environment variables</td><td width="10%">P</td><td width="25%">Host device number wrongly accepted</td></tr>
+<tr><td width="60%">For Fortran, <em>locator list</em> can be also function reference with
+      data pointer result</td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%">Ref-count change for <code>use_device_ptr</code>/<code>use_device_addr</code></td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%">Implicit reduction identifiers of C++ classes</td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%">Change of the <em>map-type</em> property from <em>ultimate</em> to
+      <em>default</em></td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%">Concept of <em>assumed-size arrays</em> in C and C++</td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%">Mapping of <em>assumed-size arrays</em> in C, C++ and Fortran</td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%"><code>groupprivate</code> directive</td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%"><code>local</code> clause to declare target directive</td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%"><code>part_size</code> allocator trait</td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%"><code>pin_device</code>, <code>preferred_device</code> and <code>target_access</code>
+      allocator traits</td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%"><code>access</code> allocator trait changes</td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%">Extension of <code>interop</code> operation of <code>append_args</code>, allowing all
+      modifiers of the <code>init</code> clause</td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%"><code>interop</code> clause to <code>dispatch</code></td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%"><code>apply</code> code to loop-transforming constructs</td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%"><code>omp_curr_progress_width</code> identifier</td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%"><code>safesync</code> clause to the <code>parallel</code> construct</td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%"><code>omp_get_max_progress_width</code> runtime routine</td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%"><code>strict</code> modifier keyword to <code>num_threads</code></td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%"><code>memscope</code> clause to <code>atomic</code> and <code>flush</code></td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%">Routines for obtaining memory spaces/allocators for shared/device memory</td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%"><code>omp_get_memspace_num_resources</code> routine</td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%"><code>omp_get_submemspace</code> routine</td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%"><code>ompt_get_buffer_limits</code> OMPT routine</td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%">Extension of <code>OMP_DEFAULT_DEVICE</code> and new
+      <code>OMP_AVAILABLE_DEVICES</code> environment vars</td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%">Supporting increments with abstract names in <code>OMP_PLACES</code></td><td width="10%">N</td><td width="25%"></td></tr>
+</table>
+
+</div>
+<div class="unnumberedsubsec" id="Other-new-TR-11-features">
+<h4 class="unnumberedsubsec">Other new TR 11 features</h4>
+<table>
+<tr><td width="60%">Relaxed Fortran restrictions to the <code>aligned</code> clause</td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%">Mapping lambda captures</td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%">For Fortran, atomic compare with storing the comparison result</td><td width="10%">N</td><td width="25%"></td></tr>
+<tr><td width="60%"><code>aligned</code> clause changes for <code>simd</code> and <code>declare simd</code></td><td width="10%">N</td><td width="25%"></td></tr>
+</table>
+
+
+
+
+</div>
+</div>
+<hr>
+<div class="header">
+<p>
+Previous: <a href="OpenMP-5_002e2.html">OpenMP 5.2</a>, Up: <a href="OpenMP-Implementation-Status.html">OpenMP Implementation Status</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Library-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

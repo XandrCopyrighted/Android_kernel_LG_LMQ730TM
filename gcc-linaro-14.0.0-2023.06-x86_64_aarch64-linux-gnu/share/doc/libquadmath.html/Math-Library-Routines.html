@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 6.8, https://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- Copyright (C) 2010-2023 Free Software Foundation, Inc.
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.2 or
+any later version published by the Free Software Foundation; with no
+Invariant Sections, with the Front-Cover Texts being "A GNU Manual,"
+and with the Back-Cover Texts as in (a) below.  A copy of the
+license is included in the section entitled "GNU Free Documentation
+License."
+
+(a) The FSF's Back-Cover Text is: "You have the freedom to
+copy and modify this GNU manual. -->
+<title>Math Library Routines (GCC libquadmath)</title>
+
+<meta name="description" content="Math Library Routines (GCC libquadmath)">
+<meta name="keywords" content="Math Library Routines (GCC libquadmath)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link href="index.html" rel="start" title="Top">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="index.html" rel="up" title="Top">
+<link href="I_002fO-Library-Routines.html" rel="next" title="I/O Library Routines">
+<link href="Typedef-and-constants.html" rel="prev" title="Typedef and constants">
+<style type="text/css">
+<!--
+a.copiable-anchor {visibility: hidden; text-decoration: none; line-height: 0em}
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+span:hover a.copiable-anchor {visibility: visible}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en">
+<div class="chapter" id="Math-Library-Routines">
+<div class="header">
+<p>
+Next: <a href="I_002fO-Library-Routines.html" accesskey="n" rel="next">I/O Library Routines</a>, Previous: <a href="Typedef-and-constants.html" accesskey="p" rel="prev">Typedef and constants</a>, Up: <a href="index.html" accesskey="u" rel="up">Introduction</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<hr>
+<span id="Math-Library-Routines-1"></span><h2 class="chapter">2 Math Library Routines</h2>
+
+<p>The following mathematical functions are available:
+</p>
+<dl compact="compact">
+<dt><span><code>acosq</code>: arc cosine function</span></dt>
+<dt><span><code>acoshq</code>: inverse hyperbolic cosine function</span></dt>
+<dt><span><code>asinq</code>: arc sine function</span></dt>
+<dt><span><code>asinhq</code>: inverse hyperbolic sine function</span></dt>
+<dt><span><code>atanq</code>: arc tangent function</span></dt>
+<dt><span><code>atanhq</code>: inverse hyperbolic tangent function</span></dt>
+<dt><span><code>atan2q</code>: arc tangent function</span></dt>
+<dt><span><code>cbrtq</code>: cube root function</span></dt>
+<dt><span><code>ceilq</code>: ceiling value function</span></dt>
+<dt><span><code>copysignq</code>: copy sign of a number</span></dt>
+<dt><span><code>coshq</code>: hyperbolic cosine function</span></dt>
+<dt><span><code>cosq</code>: cosine function</span></dt>
+<dt><span><code>erfq</code>: error function</span></dt>
+<dt><span><code>erfcq</code>: complementary error function</span></dt>
+<dt><span><code>exp2q</code>: base 2 exponential function</span></dt>
+<dt><span><code>expq</code>: exponential function</span></dt>
+<dt><span><code>expm1q</code>: exponential minus 1 function</span></dt>
+<dt><span><code>fabsq</code>: absolute value function</span></dt>
+<dt><span><code>fdimq</code>: positive difference function</span></dt>
+<dt><span><code>finiteq</code>: check finiteness of value</span></dt>
+<dt><span><code>floorq</code>: floor value function</span></dt>
+<dt><span><code>fmaq</code>: fused multiply and add</span></dt>
+<dt><span><code>fmaxq</code>: determine maximum of two values</span></dt>
+<dt><span><code>fminq</code>: determine minimum of two values</span></dt>
+<dt><span><code>fmodq</code>: remainder value function</span></dt>
+<dt><span><code>frexpq</code>: extract mantissa and exponent</span></dt>
+<dt><span><code>hypotq</code>: Eucledian distance function</span></dt>
+<dt><span><code>ilogbq</code>: get exponent of the value</span></dt>
+<dt><span><code>isinfq</code>: check for infinity</span></dt>
+<dt><span><code>isnanq</code>: check for not a number</span></dt>
+<dt><span><code>issignalingq</code>: check for signaling not a number</span></dt>
+<dt><span><code>j0q</code>: Bessel function of the first kind, first order</span></dt>
+<dt><span><code>j1q</code>: Bessel function of the first kind, second order</span></dt>
+<dt><span><code>jnq</code>: Bessel function of the first kind, <var>n</var>-th order</span></dt>
+<dt><span><code>ldexpq</code>: load exponent of the value</span></dt>
+<dt><span><code>lgammaq</code>: logarithmic gamma function</span></dt>
+<dt><span><code>llrintq</code>: round to nearest integer value</span></dt>
+<dt><span><code>llroundq</code>: round to nearest integer value away from zero</span></dt>
+<dt><span><code>logbq</code>: get exponent of the value</span></dt>
+<dt><span><code>logq</code>: natural logarithm function</span></dt>
+<dt><span><code>log10q</code>: base 10 logarithm function</span></dt>
+<dt><span><code>log1pq</code>: compute natural logarithm of the value plus one</span></dt>
+<dt><span><code>log2q</code>: base 2 logarithm function</span></dt>
+<dt><span><code>lrintq</code>: round to nearest integer value</span></dt>
+<dt><span><code>lroundq</code>: round to nearest integer value away from zero</span></dt>
+<dt><span><code>modfq</code>: decompose the floating-point number</span></dt>
+<dt><span><code>nanq</code>: return quiet NaN</span></dt>
+<dt><span><code>nearbyintq</code>: round to nearest integer</span></dt>
+<dt><span><code>nextafterq</code>: next representable floating-point number</span></dt>
+<dt><span><code>powq</code>: power function</span></dt>
+<dt><span><code>remainderq</code>: remainder function</span></dt>
+<dt><span><code>remquoq</code>: remainder and part of quotient</span></dt>
+<dt><span><code>rintq</code>: round-to-nearest integral value</span></dt>
+<dt><span><code>roundq</code>: round-to-nearest integral value, return <code>__float128</code></span></dt>
+<dt><span><code>scalblnq</code>: compute exponent using <code>FLT_RADIX</code></span></dt>
+<dt><span><code>scalbnq</code>: compute exponent using <code>FLT_RADIX</code></span></dt>
+<dt><span><code>signbitq</code>: return sign bit</span></dt>
+<dt><span><code>sincosq</code>: calculate sine and cosine simultaneously</span></dt>
+<dt><span><code>sinhq</code>: hyperbolic sine function</span></dt>
+<dt><span><code>sinq</code>: sine function</span></dt>
+<dt><span><code>sqrtq</code>: square root function</span></dt>
+<dt><span><code>tanq</code>: tangent function</span></dt>
+<dt><span><code>tanhq</code>: hyperbolic tangent function</span></dt>
+<dt><span><code>tgammaq</code>: true gamma function</span></dt>
+<dt><span><code>truncq</code>: round to integer, towards zero</span></dt>
+<dt><span><code>y0q</code>: Bessel function of the second kind, first order</span></dt>
+<dt><span><code>y1q</code>: Bessel function of the second kind, second order</span></dt>
+<dt><span><code>ynq</code>: Bessel function of the second kind, <var>n</var>-th order</span></dt>
+<dt><span><code>cabsq</code> complex absolute value function</span></dt>
+<dt><span><code>cargq</code>: calculate the argument</span></dt>
+<dt><span><code>cimagq</code> imaginary part of complex number</span></dt>
+<dt><span><code>crealq</code>: real part of complex number</span></dt>
+<dt><span><code>cacoshq</code>: complex arc hyperbolic cosine function</span></dt>
+<dt><span><code>cacosq</code>: complex arc cosine function</span></dt>
+<dt><span><code>casinhq</code>: complex arc hyperbolic sine function</span></dt>
+<dt><span><code>casinq</code>: complex arc sine function</span></dt>
+<dt><span><code>catanhq</code>: complex arc hyperbolic tangent function</span></dt>
+<dt><span><code>catanq</code>: complex arc tangent function</span></dt>
+<dt><span><code>ccosq</code> complex cosine function:</span></dt>
+<dt><span><code>ccoshq</code>: complex hyperbolic cosine function</span></dt>
+<dt><span><code>cexpq</code>: complex exponential function</span></dt>
+<dt><span><code>cexpiq</code>: computes the exponential function of &ldquo;i&rdquo; times a</span></dt>
+<dd><p>real value
+</p></dd>
+<dt><span><code>clogq</code>: complex natural logarithm</span></dt>
+<dt><span><code>clog10q</code>: complex base 10 logarithm</span></dt>
+<dt><span><code>conjq</code>: complex conjugate function</span></dt>
+<dt><span><code>cpowq</code>: complex power function</span></dt>
+<dt><span><code>cprojq</code>: project into Riemann Sphere</span></dt>
+<dt><span><code>csinq</code>: complex sine function</span></dt>
+<dt><span><code>csinhq</code>: complex hyperbolic sine function</span></dt>
+<dt><span><code>csqrtq</code>: complex square root</span></dt>
+<dt><span><code>ctanq</code>: complex tangent function</span></dt>
+<dt><span><code>ctanhq</code>: complex hyperbolic tangent function</span></dt>
+</dl>
+
+
+
+</div>
+<hr>
+<div class="header">
+<p>
+Next: <a href="I_002fO-Library-Routines.html">I/O Library Routines</a>, Previous: <a href="Typedef-and-constants.html">Typedef and constants</a>, Up: <a href="index.html">Introduction</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+
+
+
+</body>
+</html>
